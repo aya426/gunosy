@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <form action="" method="get">
+        <label>カテゴリ判定したい記事のURLを入力してください\
+            <input type="text" size="255" name="article_url"></label>
+        <input type="submit" value="送信">
+    </form>
+    {% if article_url %}
+        記事{{ article_url }}のジャンルは{{ genre }}です。
+    {% endif %}
+
+{% endblock %}
