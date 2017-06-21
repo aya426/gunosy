@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <form action="" method="get">
+        {{form.article_url.label}}:
+        {{form.age}}
+        {% csrf_token %}
+        <input type="submit" value="送信">
+    </form>
+    {% if article_url %}
+        記事{{ article_url }}のジャンルは{{ genre }}です。
+    {% endif %}
+
+{% endblock %}
